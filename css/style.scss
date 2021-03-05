@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #2d3436;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+//!-------按鈕 外觀 顏色 基底------
+.btn {
+  position: relative;
+  display: block;
+  color: white;
+  font-size: 14px;
+  //font-family: ;
+  text-decoration: none;
+  margin: 30px 0;
+  border: 2px solid #ff7675;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+  &::before {
+    background: #ff7675;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+}
+
+//!-------單獨設定 按鈕hover動畫------
+//*------btn1------
+.btn1::before {
+  width: 0;
+  height: 100%;
+}
+
+.btn1:hover::before {
+  width: 100%;
+}
+
+//*------btn2------
+.btn2::before {
+  width: 100%;
+  height: 0;
+}
+
+.btn2:hover::before {
+  height: 100%;
+}
+
+//*------btn3------
+.btn3::before {
+  width: 100%;
+  height: 0;
+  transform: translate(-50%, -50%) rotate(45deg); //todo 置中+旋轉45度
+}
+
+.btn3:hover::before {
+  height: 370%;
+}
+
+//*------btn4------
+.btn4::before {
+  width: 100%;
+  height: 0;
+  transform: translate(-50%, -50%) rotate(-45deg); //todo 置中+旋轉-45度
+}
+
+.btn4:hover::before {
+  height: 370%;
+}
